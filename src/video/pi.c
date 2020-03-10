@@ -137,6 +137,12 @@ static int decoder_renderer_setup(int videoFormat, int width, int height, int re
   displayRegion.fullscreen = OMX_TRUE;
   displayRegion.mode = OMX_DISPLAY_SET_FULLSCREEN;
 
+ OMX_CONFIG_ROTATIONTYPE rotationType;
+  rotationType.nSize = sizeof(OMX_CONFIG_ROTATIONTYPE);
+  rotationType.nVersion.nVersion = OMX_VERSION;
+  rotationType.nPortIndex = 90;
+  rotationType.nRotation = 90;
+ 
   if(OMX_SetParameter(ILC_GET_HANDLE(video_render), OMX_IndexConfigLatencyTarget, &latencyTarget) != OMX_ErrorNone) {
     fprintf(stderr, "Failed to set video render parameters\n");
     exit(EXIT_FAILURE);
