@@ -1,3 +1,5 @@
+This moonlight embedded has been changed to rotate the output by 90 degrees for use with the waveshare 5.5" amoled screen which has 1080x1920 resolution.
+
 # Moonlight Embedded
 
 Moonlight Embedded is an open source implementation of NVIDIA's GameStream, as used by the NVIDIA Shield, but built for Linux.
